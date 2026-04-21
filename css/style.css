@@ -1,0 +1,420 @@
+/* ============================================
+   NILEX BRAND STYLES
+   Colors: #0f3156 (Deep Navy Blue) | #f5f1e5 (Cream/White)
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  color: #1A1F2B;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --navy: #0f3156;
+  --navy-light: #1a4a7a;
+  --cream: #f5f1e5;
+  --gold: #C6A43F;
+  --white: #FFFFFF;
+  --dark-text: #1E2A3A;
+  --gray-light: #F8F7F4;
+  --border-light: #E6E2D8;
+}
+
+/* Typography */
+h1, h2, h3, h4, .serif-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 4rem; line-height: 1.1; }
+h2 { font-size: 2.8rem; margin-bottom: 1rem; }
+h3 { font-size: 1.8rem; }
+
+.section-title {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.body-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2C3A4B;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: transparent;
+  border: 1.5px solid var(--white);
+  color: var(--white);
+  padding: 12px 32px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.btn-outline-dark {
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  background: transparent;
+  padding: 10px 28px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-outline-dark:hover {
+  background: var(--navy);
+  color: white;
+}
+
+.btn-navy {
+  background: var(--navy);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-navy:hover {
+  background: var(--navy-light);
+}
+
+.inquire-btn {
+  background: transparent;
+  border: 1px solid var(--navy);
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inquire-btn:hover {
+  background: var(--navy);
+  color: white;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--dark-text);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--gold);
+}
+
+.menu-icon { display: none; font-size: 1.8rem; cursor: pointer; }
+
+/* Hero */
+.hero {
+  height: 100vh;
+  min-height: 700px;
+  background: linear-gradient(rgba(15,49,86,0.3), rgba(15,49,86,0.4)), url('https://images.pexels.com/photos/8766673/pexels-photo-8766673.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.hero-content {
+  max-width: 650px;
+  color: white;
+  animation: fadeUp 0.9s ease-out;
+}
+
+.hero-tagline { font-size: 1.2rem; margin-bottom: 1rem; font-weight: 300; letter-spacing: 1px; }
+.hero-sub { margin-bottom: 2rem; font-size: 1rem; opacity: 0.9; }
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Page Header */
+.page-header {
+  background: var(--navy);
+  padding: 10rem 8% 4rem;
+  color: white;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1rem;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #5a6874;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+}
+
+/* Collections Grid */
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+  padding: 1rem 0;
+}
+
+.product-card {
+  text-align: left;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  background: var(--cream);
+}
+
+.product-title { font-weight: 700; font-size: 1.1rem; margin-top: 0.5rem; }
+.product-desc { font-size: 0.85rem; color: #5A6B7A; margin: 0.25rem 0; }
+
+/* Variant selectors */
+.variant-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+
+.size-select, .color-select {
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  border: 1px solid var(--border-light);
+  background: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.size-select:hover, .color-select:hover { border-color: var(--gold); }
+
+/* Product Detail Page */
+.product-detail-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 8rem 8% 4rem;
+}
+
+.detail-image {
+  flex: 1;
+}
+
+.detail-image img {
+  width: 100%;
+  object-fit: cover;
+  height: 550px;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+/* Lookbook Grid */
+.lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.lookbook-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.lookbook-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.lookbook-item:hover img { transform: scale(1.02); }
+
+/* Philosophy & About */
+.philosophy, .about-section {
+  background: var(--cream);
+  padding: 5rem 8%;
+  text-align: center;
+}
+
+.philosophy-quote {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--navy);
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.blog-card {
+  background: white;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.blog-card h4 { margin: 1rem 0 0.5rem; font-size: 1.3rem; }
+
+/* Footer */
+footer {
+  background: var(--navy);
+  color: #ccc;
+  padding: 3rem 8% 2rem;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: #ddd;
+  font-size: 1.3rem;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover { color: var(--gold); }
+
+.container { padding: 4rem 8%; }
+.text-center { text-align: center; }
+.gold-accent { color: var(--gold); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .menu-icon { display: block; }
+  .lookbook-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2rem; }
+  .collections-grid { grid-template-columns: 1fr; }
+  .page-header h1 { font-size: 2.5rem; }
+}
