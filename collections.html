@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nilex | The Collection – Suits, Shirts, Trousers, Accessories</title>
+  <meta name="description" content="Explore the Nilex collection. Premium fabrics, impeccable cuts. Suits, shirts, trousers, and accessories for the modern gentleman.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">NILEX</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="collections.html" class="active">Collections</a>
+    <a href="lookbook.html">Lookbook</a>
+    <a href="blog.html">Style Blog</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="menu-icon"><i class="fas fa-bars"></i></div>
+</nav>
+
+<div class="page-header">
+  <h1>The Collection</h1>
+  <p>Refined fabrics, impeccable cuts — no prices, only quiet luxury.</p>
+</div>
+
+<div class="container">
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="suits">Suits</button>
+    <button class="filter-btn" data-filter="shirts">Shirts</button>
+    <button class="filter-btn" data-filter="trousers">Trousers</button>
+    <button class="filter-btn" data-filter="accessories">Accessories</button>
+  </div>
+
+  <div class="collections-grid" id="productsGrid">
+    <div class="product-card" data-category="suits">
+      <img src="https://images.pexels.com/photos/8454630/pexels-photo-8454630.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Navy Cashmere Suit">
+      <div class="product-title">Navy Cashmere Suit</div>
+      <div class="product-desc">Super 150s wool, peak lapel, half-canvas</div>
+      <div class="variant-group">
+        <select class="size-select"><option>S</option><option>M</option><option>L</option><option>XL</option></select>
+        <select class="color-select"><option>Navy</option><option>Charcoal</option></select>
+      </div>
+      <button class="inquire-btn" data-product="Navy Cashmere Suit"><i class="fas fa-envelope"></i> Inquire</button>
+    </div>
+    <div class="product-card" data-category="shirts">
+      <img src="https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Egyptian Cotton Shirt">
+      <div class="product-title">Egyptian Cotton Shirt</div>
+      <div class="product-desc">Mother-of-pearl buttons, tailored slim fit</div>
+      <div class="variant-group">
+        <select class="size-select"><option>S</option><option>M</option><option>L</option><option>XL</option></select>
+        <select class="color-select"><option>White</option><option>Sky Blue</option></select>
+      </div>
+      <button class="inquire-btn" data-product="Egyptian Cotton Shirt"><i class="fas fa-envelope"></i> Inquire</button>
+    </div>
+    <div class="product-card" data-category="trousers">
+      <img src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pleated Wool Trousers">
+      <div class="product-title">Pleated Wool Trousers</div>
+      <div class="product-desc">Italian fabric, refined drape</div>
+      <div class="variant-group">
+        <select class="size-select"><option>30</option><option>32</option><option>34</option><option>36</option></select>
+        <select class="color-select"><option>Grey</option><option>Navy</option></select>
+      </div>
+      <button class="inquire-btn" data-product="Pleated Wool Trousers"><i class="fas fa-envelope"></i> Inquire</button>
+    </div>
+    <div class="product-card" data-category="accessories">
+      <img src="https://images.pexels.com/photos/3662991/pexels-photo-3662991.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Saffiano Leather Belt">
+      <div class="product-title">Saffiano Leather Belt</div>
+      <div class="product-desc">Handcrafted, subtle gold buckle</div>
+      <div class="variant-group">
+        <select class="size-select"><option>32</option><option>34</option><option>36</option></select>
+        <select class="color-select"><option>Black</option><option>Brown</option></select>
+      </div>
+      <button class="inquire-btn" data-product="Saffiano Leather Belt"><i class="fas fa-envelope"></i> Inquire</button>
+    </div>
+    <div class="product-card" data-category="suits">
+      <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Charcoal Suit">
+      <div class="product-title">Charcoal Executive Suit</div>
+      <div class="product-desc">Worsted wool, double vent</div>
+      <div class="variant-group">
+        <select class="size-select"><option>S</option><option>M</option><option>L</option><option>XL</option></select>
+        <select class="color-select"><option>Charcoal</option><option>Navy</option></select>
+      </div>
+      <button class="inquire-btn" data-product="Charcoal Executive Suit"><i class="fas fa-envelope"></i> Inquire</button>
+    </div>
+    <div class="product-card" data-category="shirts">
+      <img src="https://images.pexels.com/photos/1345410/pexels-photo-1345410.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Linen Shirt">
+      <div class="product-title">Linen Summer Shirt</div>
+      <div class="product-desc">Breathable European linen</div>
+      <div class="variant-group">
+        <select class="size-select"><option>S</option><option>M</option><option>L</option><option>XL</option></select>
+        <select class="color-select"><option>Natural</option><option>Light Blue</option></select>
+      </div>
+      <button class="inquire-btn" data-product="Linen Summer Shirt"><i class="fas fa-envelope"></i> Inquire</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><a href="index.html" class="logo" style="color: white; font-size: 1.8rem;">NILEX</a><p>Timeless Elegance — Bishoftu</p></div>
+    <div class="footer-col">
+      <h4>Follow Nilex</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Visit</h4><p>Mekelakeya, Bishoftu<br>Ethiopia</p></div>
+  </div>
+  <div class="text-center" style="margin-top: 2rem; font-size: 0.8rem;">© 2025 Nilex — Crafted with quiet confidence in Ethiopia</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
